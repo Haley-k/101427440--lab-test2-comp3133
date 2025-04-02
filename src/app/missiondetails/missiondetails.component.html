@@ -1,38 +1,41 @@
-<div class="details-box" *ngIf="mission">
-    <img [src]="mission.links.mission_patch_small" alt="Patch" width="200" />
+<mat-card *ngIf="mission" class="custom-card mat-elevation-z4">
+    <mat-card-content>
+        <img [src]="mission.links.mission_patch_small" alt="Patch" width="200" />
 
-    <h1>Mission - {{ mission.mission_name }}</h1>
-    <hr />
-    <p><strong>Name:</strong> {{ mission.mission_name }}</p>
-    <p><strong>Launch Year:</strong> {{ mission.launch_year }}</p>
+        <mat-divider class="custom-divider my-2"></mat-divider>
+        <p><strong>Name:</strong> {{ mission.mission_name }}</p>
+        <p><strong>Launch Year:</strong> {{ mission.launch_year }}</p>
 
-    <h1>Rocket</h1>
-    <hr />
-    <p><strong>Name:</strong> {{ mission.rocket.rocket_name }}</p>
-    <p><strong>Type:</strong> {{ mission.rocket.rocket_type }}</p>
+        <h2 class="section-title">Rocket</h2>
+        <mat-divider class="custom-divider"></mat-divider>
+        <p><strong>Name:</strong> {{ mission.rocket.rocket_name }}</p>
+        <p><strong>Type:</strong> {{ mission.rocket.rocket_type }}</p>
 
-    <h1>Launch Site</h1>
-    <hr />
-    <p><strong>Name:</strong> {{ mission.launch_site.site_name_long }}</p>
+        <h2 class="section-title">Launch Site</h2>
+        <mat-divider class="custom-divider"></mat-divider>
+        <p><strong>Name:</strong> {{ mission.launch_site.site_name_long }}</p>
 
-    <h1>Launch Details</h1>
-    <hr />
-    <p>{{ mission.details }}</p>
+        <h2 class="section-title">Launch Details</h2>
+        <mat-divider class="custom-divider"></mat-divider>
+        <p>{{ mission.details }}</p>
 
-    <h1>More Info on Launch Details</h1>
-    <hr />
-    <div class="link-icons">
-        <a *ngIf="mission.links.article_link" [href]="mission.links.article_link" target="_blank" title="Article">
-            📰
-        </a>
-        <a *ngIf="mission.links.wikipedia" [href]="mission.links.wikipedia" target="_blank" title="Wikipedia">
-            📚
-        </a>
-        <a *ngIf="mission.links.video_link" [href]="mission.links.video_link" target="_blank" title="Video">
-            ▶️
-        </a>
-    </div>
+        <h2 class="section-title">More Info on Launch Details</h2>
+        <mat-divider class="custom-divider"></mat-divider>
+        <div class="link-icons">
+            <a *ngIf="mission.links.article_link" [href]="mission.links.article_link" target="_blank"
+                matTooltip="Article">
+                📰
+            </a>
+            <a *ngIf="mission.links.wikipedia" [href]="mission.links.wikipedia" target="_blank" matTooltip="Wikipedia">
+                📚
+            </a>
+            <a *ngIf="mission.links.video_link" [href]="mission.links.video_link" target="_blank" matTooltip="Video">
+                ▶️
+            </a>
+        </div>
 
-
-    <button (click)="goBack()">back</button>
-</div>
+        <div class="button-wrapper">
+            <button mat-raised-button class="custom-button" (click)="goBack()">Back</button>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,39 +1,54 @@
-.details-box {
-    background-color: #fbd063;
-    padding: 10px;
+.custom-card {
+  background-color: #fbd063;
+  padding: 10px;
+  border-radius: 0;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid #fff;
+.custom-divider {
+  border: none;
+  border-top: 1px solid #fff;
+  margin: 16px 0;
 }
 
-button {
-    background-color: #4CAF50;  
-    color: white;              
-    padding: 8px 16px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;      
-    transition: background-color 0.3s;
-    margin-top: 16px;
+.section-title {
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.custom-button {
+  background-color: #4CAF50 !important;
+  color: white !important;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 16px;
+}
+
+.custom-button:hover {
+  background-color: #45a049 !important;
 }
 
 .link-icons {
-    margin-top: 8px;
-  }
-  
-  .link-icons a {
-    font-size: 28px;
-    margin-right: 16px;
-    text-decoration: none;
-    transition: transform 0.2s;
-    display: inline-block;
-  }
-  
-  .link-icons a:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-  }
-  
+  margin-top: 8px;
+}
+
+.link-icons a {
+  font-size: 28px;
+  margin-right: 16px;
+  text-decoration: none;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.link-icons a:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.button-wrapper {
+  margin-top: 24px;
+}
